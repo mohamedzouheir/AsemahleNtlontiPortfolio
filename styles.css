@@ -1,0 +1,33 @@
+body {
+      margin: 0;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh; /* full height */
+      width: 20%;
+      background-color:white;
+      padding-top: 1rem;
+      border-right: 1px solid #ddd;
+    }
+    .content {
+      margin-left: 20%; /* same as sidebar width */
+      padding: 2rem;
+    }
+    .nav-link {
+      color: black;
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+    }
+    .nav-link:hover {
+      color: gray;
+    }
+
+    .nav-item {
+      font-size: larger;
+      margin-top: 10%;
+      color: black;
+    }
