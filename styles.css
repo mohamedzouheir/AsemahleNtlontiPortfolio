@@ -31,12 +31,11 @@ html, body {
 }
 .layer-mid {
   background-image: url('assets/svg/layer-mid.svg');
-  opacity: 0.5;
   z-index: 2;
 }
 .layer-front {
   background-image:  url('assets/svg/layer-back\(1\).svg');
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 3;
 }
 
@@ -98,5 +97,34 @@ html, body {
       .navbar-nav { gap: 1rem; }
       .navbar .navbar-nav > .nav-item > .nav-link.custom-nav-link { font-size: 1rem; padding: 0.45rem 0.6rem; }
     }
+
+      .carousel-item {
+            height: 500px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 20px;
+        }
+        .carousel-caption .btn {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border-color: #000;
+        }
+        .carousel-caption .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
 
     footer { padding: 1.25rem 0; color: #6c757d; }
