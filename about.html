@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asemahle Ntlonti - About</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Prata&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Prata', serif;
+      background-color: #fafafa;
+      line-height: 1.7;
+    }
+
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    #logo {
+      width: 50px;
+      height: 50px;
+      margin: 0 3rem;
+    }
+
+    .custom-nav-link {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #333 !important;
+      transition: all 0.3s ease;
+    }
+
+    .custom-nav-link:hover {
+      color: #666 !important;
+      transform: translateY(-2px);
+    }
+
+    .page-header {
+      padding: 120px 0 80px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23f8f9fa"><polygon points="0,0 1000,0 1000,80 0,100"/></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+
+    .page-title {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+    }
+
+    .page-subtitle {
+      font-size: 1.3rem;
+      color: #666;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hero-image {
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image:hover {
+      transform: translateY(-10px);
+    }
+
+    .section-title {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2c2c2c;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #333, transparent);
+    }
+
+    .bio-text {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .bio-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-section {
+      background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+      color: white;
+      padding: 80px 0;
+      margin: 80px 0;
+      position: relative;
+    }
+
+    .quote-section::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 8rem;
+      opacity: 0.1;
+      font-family: 'Prata', serif;
+    }
+
+    .quote-text {
+      font-size: 1.5rem;
+      font-style: italic;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .quote-author {
+      text-align: center;
+      font-family: 'Julius Sans One', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(to bottom, #e9ecef, #333, #e9ecef);
+    }
+
+    .timeline-item {
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: 55%;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 55%;
+      text-align: left;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .timeline-year {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      top: -15px;
+    }
+
+    .timeline-title {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-description {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-top: 4px solid transparent;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      border-top-color: #333;
+    }
+
+    .skill-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .skill-title {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+    }
+
+    .skill-description {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 80px 0;
+      margin-top: 80px;
+    }
+
+    .cta-title {
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2c2c2c;
+      margin-bottom: 2rem;
+    }
+
+    .cta-text {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-custom {
+      background: #2c2c2c;
+      color: white;
+      border: 2px solid #2c2c2c;
+      padding: 15px 40px;
+      font-family: 'Julius Sans One', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background: transparent;
+      color: #2c2c2c;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(44,44,44,0.2);
+    }
+
+    @media (max-width: 992px) {
+      .page-title {
+        font-size: 2.5rem;
+      }
+      
+      .timeline::before {
+        left: 30px;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 70px;
+        margin-right: 0;
+        text-align: left;
+      }
+      
+      .timeline-year {
+        left: 30px;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .quote-text {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+    <div class="container d-flex justify-content-center align-items-center py-2">
+      
+      <!-- Left nav -->
+      <ul class="navbar-nav flex-row gap-5">
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="portfolio.html">Portfolio</a></li>
+      </ul>
+      
+      <!-- Center logo -->
+      <img id="logo" src="assets/svg/ivory-tusks-svgrepo-com.svg" alt="Logo">
+
+      <!-- Right nav -->
+      <ul class="navbar-nav flex-row gap-5">
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="#" style="color: #333 !important; font-weight: 600;">About</a></li>
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="page-title">About the Artist</h1>
+      <p class="page-subtitle">Exploring identity, heritage, and contemporary expression through mixed media and textile traditions</p>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="assets/images/Asemahle_2.avif" alt="Asemahle Ntlonti" class="img-fluid hero-image">
+        </div>
+        <div class="col-lg-6">
+          <div class="bio-text">
+            <p>Asemahle Ntlonti is a contemporary South African artist whose work bridges the gap between traditional African textile practices and modern artistic expression. Born and raised in the Eastern Cape, her art is deeply rooted in the cultural heritage and storytelling traditions of her community.</p>
+            
+            <p>Working primarily with mixed media, Ntlonti creates layered compositions that speak to themes of identity, memory, and place. Her use of materials such as acrylic gel, cotton, and leno thread alongside traditional paint creates textural narratives that invite both visual and tactile engagement.</p>
+            
+            <p>Her practice is informed by a deep understanding of how landscape and cultural identity intersect, creating works that serve as both personal reflections and broader commentaries on contemporary South African experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="quote-text">Art becomes a bridge between what was, what is, and what could be. Through texture and form, I seek to honor the stories embedded in our landscapes and our people.</p>
+          <p class="quote-author">— Asemahle Ntlonti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Recent Works</h3>
+            <p class="timeline-description">Creation of major works including "Ntaba zihlangene III" and "Isikhumbuzo selizwe," showcasing evolved techniques combining traditional textile methods with contemporary painting practices.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Material Exploration</h3>
+            <p class="timeline-description">Deepened exploration of mixed media techniques, incorporating cotton and leno thread into painted compositions, developing signature textural approach.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Cultural Research</h3>
+            <p class="timeline-description">Extensive research into traditional Eastern Cape textile practices and their contemporary relevance, informing new body of work.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Artistic Development</h3>
+            <p class="timeline-description">Focus on landscape and memory themes, developing distinctive approach to layered compositions and textural narratives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & APPROACH -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center">Artistic Practice</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🎨</span>
+          <h3 class="skill-title">Mixed Media</h3>
+          <p class="skill-description">Combining traditional painting techniques with textile materials, creating rich, layered compositions that invite both visual and tactile engagement.</p>
+        </div>
+        
+        <div class="skill-card">
+          <span class="skill-icon">🧵</span>
+          <h3 class="skill-title">Textile Integration</h3>
+          <p class="skill-description">Incorporating cotton, leno thread, and other textile elements into painted works, bridging traditional craft with contemporary art.</p>
+        </div>
+        
+        <div class="skill-card">
+          <span class="skill-icon">🏔️</span>
+          <h3 class="skill-title">Landscape Narrative</h3>
+          <p class="skill-description">Creating works that explore the relationship between place, memory, and identity through abstracted landscape forms.</p>
+        </div>
+        
+        <div class="skill-card">
+          <span class="skill-icon">📚</span>
+          <h3 class="skill-title">Cultural Research</h3>
+          <p class="skill-description">Deep engagement with cultural traditions and their contemporary relevance, informing both concept and technique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2 class="cta-title">Let's Connect</h2>
+      <p class="cta-text">Interested in collaborating, purchasing work, or learning more about my artistic practice? I'd love to hear from you.</p>
+      <a href="#contact" class="btn btn-custom">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-5 bg-light" id="contact">
+    <div class="container">
+      <h2 class="section-title text-center">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="mx-auto" style="max-width:600px;">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input class="form-control form-control-lg" placeholder="Name *" required>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control form-control-lg" type="email" placeholder="Email *" required>
+              </div>
+            </div>
+            <div class="mt-3">
+              <input class="form-control form-control-lg" placeholder="Subject">
+            </div>
+            <div class="mt-3">
+              <textarea class="form-control form-control-lg" rows="6" placeholder="Your message *" required></textarea>
+            </div>
+            <div class="text-center mt-4">
+              <button class="btn btn-custom">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 bg-white border-top">
+    <div class="container">
+      <small class="text-muted">© 2025 Asemahle Ntlonti. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll animation to timeline items
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Apply animation to timeline items and skill cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const skillCards = document.querySelectorAll('.skill-card');
+      
+      // Set initial state
+      [...timelineItems, ...skillCards].forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
+        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(item);
+      });
+    });
+
+    // Add parallax effect to header
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const header = document.querySelector('.page-header');
+      if (header) {
+        header.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+    });
+  </script>
+</body>
+</html>
