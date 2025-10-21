@@ -28,12 +28,12 @@
 }
 .layer-mid {
   background-image: url('../svg/afro_parallax_layer.svg');
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: 2;
 }
 .layer-front {
   background-image:  url('../svg/simple_afro_parallax_layer.svg');
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: 3;
 }
 
@@ -92,7 +92,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             border-color: #000;
-            
+
         }
         .btn:hover {
             transform: translateY(-2px);
