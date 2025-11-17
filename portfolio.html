@@ -79,16 +79,16 @@
         year: "2016",
         medium: "Steel, speaker, audio and paint",
         dimensions: "54.5 x 55.5 cm",
-        image: "assets/images/Asemahle Ntlonti, Ntaba zihlangene III (2023) Acrylic paint, paper, acrylic gel on canvas, 140.5 x 137.4 x 6.5 cm (framed).jpg",
+        image: "assets/images/Exhibitions/2017/Amabali (2016) _ Steel, speaker, audio and paint, 54.5 x 55.5 cm.JPG",
         description: "A powerful exploration of landscape and memory, combining traditional techniques with contemporary materials."
       },
       {
         id: 2,
-        title: "Ntaba zihlangene III (Scale View)",
-        year: "2023",
-        medium: "Acrylic paint, paper, acrylic gel on canvas",
-        dimensions: "140.5 x 137.4 x 6.5 cm (framed)",
-        image: "assets/images/Asemahle Ntlonti, Ntaba zihlangene III (2023) Acrylic paint, paper, acrylic gel on canvas, 140.5 x 137.4 x 6.5 cm (framed) (scale view).jpg",
+        title: "Inhlangano",
+        year: "2016-2017",
+        medium: "Mixed Media on plastic plates",
+        dimensions: "Dimensions variable",
+        image:"assets/images/Exhibitions/2017/Inhlangano (2016-2017) _ Mixed media on plastic plates, installation dimensions variable.jpg",
         description: "Detail view showcasing the intricate textures and layered compositions that define this monumental work."
       },
       {
@@ -167,12 +167,7 @@
       
       modalImage.src = artwork.image;
       modalTitle.textContent = artwork.title;
-      modalDetails.innerHTML = `
-        <strong>${artwork.year}</strong><br>
-        ${artwork.medium}<br>
-        ${artwork.dimensions}<br><br>
-        ${artwork.description}
-      `;
+      modalDetails.innerHTML = ``;
       
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
