@@ -1,301 +1,536 @@
-    .page-header {
-      padding: 120px 0 80px;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      position: relative;
-    }
+.page-header {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
 
-    .page-title {
-      font-family: 'Julius Sans One', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 300;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #2c2c2c;
-      margin-bottom: 1rem;
-    }
+.page-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
 
-    .page-subtitle {
-      font-size: 1.3rem;
-      color: #666;
-      font-weight: 300;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+.page-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-    .hero-image {
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+.hero-image {
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-    .hero-image:hover {
-      transform: translateY(-10px);
-    }
+.hero-image:hover {
+  transform: translateY(-10px);
+}
 
-    .section-title {
-      font-family: 'Julius Sans One', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #2c2c2c;
-      margin-bottom: 3rem;
-      position: relative;
-    }
+.section-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2c2c2c;
+  margin-bottom: 3rem;
+  position: relative;
+}
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #333, transparent);
-    }
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+}
 
-    .bio-text {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.8;
-      text-align: justify;
-    }
+.bio-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
 
-    .bio-text p {
-      margin-bottom: 1.5rem;
-    }
+.bio-text p {
+  margin-bottom: 1.5rem;
+}
 
-    .quote-section {
-      background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
-      color: white;
-      padding: 80px 0;
-      margin: 80px 0;
-      position: relative;
-    }
+.quote-section {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  color: white;
+  padding: 80px 0;
+  margin: 80px 0;
+  position: relative;
+}
 
-    .quote-section::before {
-      content: '"';
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 8rem;
-      opacity: 0.1;
-      font-family: 'Prata', serif;
-    }
+.quote-section::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  opacity: 0.1;
+  font-family: 'Prata', serif;
+}
 
-    .quote-text {
-      font-size: 1.5rem;
-      font-style: italic;
-      text-align: center;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-      position: relative;
-      z-index: 2;
-    }
+.quote-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
 
-    .quote-author {
-      text-align: center;
-      font-family: 'Julius Sans One', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
+.quote-author {
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
 
-    .timeline {
-      position: relative;
-      padding: 0;
-    }
+.timeline {
+  position: relative;
+  padding: 0;
+}
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-      height: 100%;
-      width: 2px;
-      background: linear-gradient(to bottom, #e9ecef, #333, #e9ecef);
-    }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #e9ecef, #333, #e9ecef);
+}
 
-    .timeline-item {
-      margin-bottom: 3rem;
-      position: relative;
-    }
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
 
-    .timeline-item:nth-child(odd) .timeline-content {
-      margin-right: 55%;
-      text-align: right;
-    }
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 55%;
+  text-align: right;
+}
 
-    .timeline-item:nth-child(even) .timeline-content {
-      margin-left: 55%;
-      text-align: left;
-    }
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 55%;
+  text-align: left;
+}
 
-    .timeline-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      position: relative;
-    }
+.timeline-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+}
 
-    .timeline-year {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #333;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-family: 'Julius Sans One', sans-serif;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      top: -15px;
-    }
+.timeline-year {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  top: -15px;
+}
 
-    .timeline-title {
-      font-family: 'Julius Sans One', sans-serif;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #2c2c2c;
-      margin-bottom: 1rem;
-    }
+.timeline-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
 
-    .timeline-description {
-      color: #666;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+.timeline-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
 
-    .skill-card {
-      background: white;
-      padding: 2.5rem 2rem;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      border-top: 4px solid transparent;
-    }
+.skill-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
 
-    .skill-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-      border-top-color: #333;
-    }
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  border-top-color: #333;
+}
 
-    .skill-icon {
-      font-size: 3rem;
-      margin-bottom: 1.5rem;
-      display: block;
-    }
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
 
-    .skill-title {
-      font-family: 'Julius Sans One', sans-serif;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #2c2c2c;
-      margin-bottom: 1rem;
-    }
+.skill-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
 
-    .skill-description {
-      color: #666;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+.skill-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
-    .cta-section {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      padding: 80px 0;
-      margin-top: 80px;
-    }
+.cta-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+  margin-top: 80px;
+}
 
-    .cta-title {
-      font-family: 'Julius Sans One', sans-serif;
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #2c2c2c;
-      margin-bottom: 2rem;
-    }
+.cta-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2c2c2c;
+  margin-bottom: 2rem;
+}
 
-    .cta-text {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.cta-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .btn-custom {
-      background: #2c2c2c;
-      color: white;
-      border: 2px solid #2c2c2c;
-      padding: 15px 40px;
-      font-family: 'Julius Sans One', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
+.btn-custom {
+  background: #2c2c2c;
+  color: white;
+  border: 2px solid #2c2c2c;
+  padding: 15px 40px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
 
-    .btn-custom:hover {
-      background: transparent;
-      color: #2c2c2c;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(44,44,44,0.2);
-    }
+.btn-custom:hover {
+  background: transparent;
+  color: #2c2c2c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(44,44,44,0.2);
+}
 
-    @media (max-width: 992px) {
-      .page-title {
-        font-size: 2.5rem;
-      }
-      
-      .timeline::before {
-        left: 30px;
-      }
-      
-      .timeline-item:nth-child(odd) .timeline-content,
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 70px;
-        margin-right: 0;
-        text-align: left;
-      }
-      
-      .timeline-year {
-        left: 30px;
-        transform: none;
-      }
-    }
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
 
-    @media (max-width: 768px) {
-      .page-title {
-        font-size: 2rem;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .quote-text {
-        font-size: 1.2rem;
-      }
-    }
+/* Tablet (992px and below) */
+@media (max-width: 991.98px) {
+  .page-header {
+    padding: 80px 0 60px;
+  }
+  
+  .page-title {
+    font-size: 2.8rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .bio-text {
+    font-size: 1rem;
+  }
+  
+  .quote-section {
+    padding: 60px 20px;
+    margin: 60px 0;
+  }
+  
+  .quote-text {
+    font-size: 1.3rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 70px;
+    margin-right: 0;
+    text-align: left;
+  }
+  
+  .timeline-year {
+    left: 30px;
+    transform: none;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-title {
+    font-size: 2.2rem;
+  }
+  
+  .cta-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 767.98px) {
+  .page-header {
+    padding: 60px 0 40px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-image {
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-image:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bio-text {
+    font-size: 0.95rem;
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .quote-section {
+    padding: 50px 15px;
+    margin: 50px 0;
+  }
+  
+  .quote-section::before {
+    font-size: 5rem;
+  }
+  
+  .quote-text {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .quote-author {
+    font-size: 0.8rem;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 60px;
+  }
+  
+  .timeline-year {
+    left: 20px;
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .timeline-title {
+    font-size: 1rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+  
+  .skill-title {
+    font-size: 1rem;
+  }
+  
+  .skill-description {
+    font-size: 0.9rem;
+  }
+  
+  .cta-section {
+    padding: 60px 20px;
+    margin-top: 60px;
+  }
+  
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .btn-custom {
+    padding: 12px 35px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile (576px and below) */
+@media (max-width: 575.98px) {
+  .page-header {
+    padding: 50px 0 30px;
+  }
+  
+  .page-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .bio-text {
+    font-size: 0.9rem;
+  }
+  
+  .quote-text {
+    font-size: 1rem;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 50px;
+  }
+  
+  .timeline-year {
+    left: 15px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .timeline-content {
+    padding: 1.2rem;
+  }
+  
+  .skill-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-text {
+    font-size: 0.95rem;
+  }
+  
+  .btn-custom {
+    padding: 12px 30px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Extra small devices (400px and below) */
+@media (max-width: 400px) {
+  .page-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .quote-text {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-title {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+}
