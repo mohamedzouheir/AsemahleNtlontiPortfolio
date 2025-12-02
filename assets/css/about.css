@@ -192,8 +192,7 @@
 }
 
 .skill-card {
-  background: white;
-  padding: 2.5rem 2rem;
+  background: black;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -207,10 +206,68 @@
   border-top-color: #333;
 }
 
-.skill-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
+.mixed-media {
+  position: relative;
+  padding: 2.5rem 2rem;
+  z-index: 1;
+}
+.mixed-media::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/Exhibitions/2017/Inhlangano\ \(2016-2017\)\ _\ Mixed\ media\ on\ plastic\ plates\,\ installation\ dimensions\ variable.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.textile-intergration {
+  position: relative;
+  padding: 2.5rem 2rem;
+  z-index: 1;
+}
+.textile-intergration::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/DSC05159.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.cultural-research {
+  position: relative;
+  padding: 2.5rem 2rem;
+  z-index: 1;
+}
+.cultural-research::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/xhosa6.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.landscape-narrative {
+  position: relative;
+  padding: 2.5rem 2rem;
+  z-index: 1;
+}
+.landscape-narrative::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/xhosa10.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .skill-title {
@@ -218,12 +275,12 @@
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #2c2c2c;
+  color:white;
   margin-bottom: 1rem;
 }
 
 .skill-description {
-  color: #666;
+  color:white;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -428,10 +485,6 @@
   
   .skill-card {
     padding: 2rem 1.5rem;
-  }
-  
-  .skill-icon {
-    font-size: 2.5rem;
   }
   
   .skill-title {
