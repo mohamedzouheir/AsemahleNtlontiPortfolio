@@ -21,7 +21,7 @@
 }
 
 .layer-back {
-  background-image: url('../images/Asemahle\ Ntlonti\,\ Ntaba\ zihlangene\ III\ \(2023\)\ Acrylic\ paint\,\ paper\,\ acrylic\ gel\ on\ canvas\,\ 140.5\ x\ 137.4\ x\ 6.5\ cm\ \(framed\).webp');
+  background-image: url('../images/Green\ big\ work.webp');
   z-index: 1;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .layer-gradient {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(0,0,0,0.7));
+  background: linear-gradient(to bottom, rgba(125,125,125,0.4), rgba(0,0,0,0.8));
   z-index: 4;
 }
 
