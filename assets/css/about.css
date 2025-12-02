@@ -198,6 +198,8 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
   border-top: 4px solid transparent;
+  overflow: hidden;
+  position: relative;
 }
 
 .skill-card:hover {
@@ -215,11 +217,13 @@
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: 15px;
   background-image: url("../images/Exhibitions/2017/Inhlangano\ \(2016-2017\)\ _\ Mixed\ media\ on\ plastic\ plates\,\ installation\ dimensions\ variable.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.3;
   z-index: -1;
+  
 }
 
 .textile-intergration {
@@ -231,6 +235,7 @@
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: 15px;
   background-image: url("../images/DSC05159.jpeg");
   background-size: cover;
   background-position: center;
@@ -247,6 +252,7 @@
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: 15px;
   background-image: url("../images/xhosa6.jpeg");
   background-size: cover;
   background-position: center;
@@ -263,6 +269,7 @@
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: 15px;
   background-image: url("../images/xhosa10.jpeg");
   background-size: cover;
   background-position: center;
