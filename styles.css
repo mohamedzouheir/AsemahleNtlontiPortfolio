@@ -16,10 +16,20 @@ footer {
       background: rgba(255, 255, 255, 0.95) !important;
     }
 
-    #logo {
-      width: 50px;
-      height: 50px;
+    .brand-text {
+      font-family: 'Prata', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #2c2c2c;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      margin: 0 3rem;
     }
+
+.navbar-brand:hover .brand-text {
+  color: #666;
+}
 
     .custom-nav-link {
       font-family: 'Montserrat', sans-serif;
@@ -62,6 +72,7 @@ footer {
         justify-content: space-evenly;
         width: 100%;
       }
+      
       
     }
 
@@ -132,10 +143,12 @@ footer {
         display: block;
       }
 
-      #logo {
-        width: 40px;
-        height: 40px;
+      .brand-text {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+        margin: 0.5rem 0;
       }
+      
       footer {
         padding: 1rem 0;
         font-size: 0.85rem;
@@ -151,5 +164,10 @@ footer {
       .custom-nav-link {
         font-size: 0.85rem;
         padding: 0.65rem 0.8rem;
+      }
+
+      .brand-text {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
       }
     }
