@@ -24,35 +24,49 @@
   </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-        <div class="container">
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Logo (centered on mobile, absolute center on desktop) -->
-        <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
-            <span class="brand-text">Asemahle Ntlonti</span>
-        </a>
+      <!-- Logo -->
+      <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
+        <span class="brand-text">Asemahle Ntlonti</span>
+      </a>
 
-        <!-- Spacer for mobile (keeps logo centered) -->
-        <div class="d-lg-none" style="width: 40px;"></div>
+      <!-- Spacer for mobile -->
+      <div class="d-lg-none" style="width: 40px;"></div>
 
-        <!-- Collapsible Menu -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav left-nav">
-            <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link custom-nav-link" href="portfolio.html">Portfolio</a></li>
+      <!-- Collapsible Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav left-nav">
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle custom-nav-link" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
+              Portfolio
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="portfolio.html">All Exhibitions</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="2024.html">2024</a></li>
+              <li><a class="dropdown-item" href="2023.html">2023</a></li>
+              <li><a class="dropdown-item" href="2021.html">2021</a></li>
+              <li><a class="dropdown-item" href="2020.html">2020</a></li>
+              <li><a class="dropdown-item" href="2017.html">2017</a></li>
             </ul>
-            
-            <ul class="navbar-nav right-nav">
-            <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav right-nav">
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- HERO -->
 <header class="hero">
