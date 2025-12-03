@@ -191,7 +191,7 @@
       }
     }
   </style>
-  
+
 </head>
 <body>
   <!-- NAV -->
@@ -349,6 +349,77 @@
   <footer class="text-center py-4 border-top bg-white">
     <small class="text-muted">© 2025 Mohamed Zouheir</small>
   </footer>
+
+    <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">Asemahle Ntlonti</div>
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading</div>
+  </div>
+  <script>
+    // Enhanced loading screen that waits for all images
+    function hideLoadingScreen() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      
+      // Add a minimum display time
+      setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
+        
+        // Remove from DOM after transition completes
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 800);
+      }, 500);
+    }
+
+    // Check if all images are loaded
+    function checkImagesLoaded() {
+      const images = document.querySelectorAll('img');
+      const imagePromises = [];
+
+      images.forEach(img => {
+        if (img.complete) {
+          // Image already loaded
+          imagePromises.push(Promise.resolve());
+        } else {
+          // Wait for image to load
+          imagePromises.push(
+            new Promise((resolve, reject) => {
+              img.addEventListener('load', resolve);
+              img.addEventListener('error', resolve); // Resolve even on error to not block loading
+              
+              // Timeout for slow-loading images
+              setTimeout(resolve, 3000);
+            })
+          );
+        }
+      });
+
+      return Promise.all(imagePromises);
+    }
+
+    // Wait for DOM content and all images
+    window.addEventListener('load', async function() {
+      try {
+        // Wait for all images to load
+        await checkImagesLoaded();
+        
+        // Hide loading screen
+        hideLoadingScreen();
+      } catch (error) {
+        console.error('Error loading images:', error);
+        hideLoadingScreen();
+      }
+    });
+
+    // Fallback: Force hide after 8 seconds if something goes wrong
+    setTimeout(() => {
+      const loadingScreen = document.getElementById('loadingScreen');
+      if (!loadingScreen.classList.contains('fade-out')) {
+        console.warn('Loading screen timeout - forcing hide');
+        loadingScreen.classList.add('fade-out');
+      }
+    }, 8000);
+  </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
