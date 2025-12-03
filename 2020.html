@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asemahle Ntlonti - Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="styles.css" rel="stylesheet">
+  <link href="assets/css/portfolio.css" rel="stylesheet">
+</head>
+<body>
+  <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logo (centered on mobile, absolute center on desktop) -->
+         <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
+            <span class="brand-text">Asemahle Ntlonti</span>
+         </a>
+
+        <!-- Spacer for mobile (keeps logo centered) -->
+        <div class="d-lg-none" style="width: 40px;"></div>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav left-nav">
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="portfolio.html">Portfolio</a></li>
+            </ul>
+            
+            <ul class="navbar-nav right-nav">
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="page-title">Portfolio</h1>
+      <p class="page-subtitle">A Collection of Contemporary Works</p>
+    </div>
+  </header>
+
+  <!-- GALLERY -->
+  <section class="py-5">
+    <div class="container" id="galleryContainer">
+      <!-- Exhibition sections will be populated by JavaScript -->
+    </div>
+  </section>
+
+  <!-- FULLSCREEN MODAL -->
+  <div class="fullscreen-modal" id="fullscreenModal">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <button class="nav-arrows prev-btn" id="prevBtn">&#8249;</button>
+    <button class="nav-arrows next-btn" id="nextBtn">&#8250;</button>
+    
+    <div class="modal-content-wrapper">
+      <img class="modal-image" id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-details" id="modalDetails"></p>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center py-4 border-top">
+    <small>© 2025 Mohamed Zouheir</small>
+  </footer>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">Asemahle Ntlonti</div>
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading</div>
+  </div>
+  <script>
+    // Enhanced loading screen that waits for all images
+    function hideLoadingScreen() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      
+      // Add a minimum display time
+      setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
+        
+        // Remove from DOM after transition completes
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 800);
+      }, 500);
+    }
+
+    // Check if all images are loaded
+    function checkImagesLoaded() {
+      const images = document.querySelectorAll('img');
+      const imagePromises = [];
+
+      images.forEach(img => {
+        if (img.complete) {
+          // Image already loaded
+          imagePromises.push(Promise.resolve());
+        } else {
+          // Wait for image to load
+          imagePromises.push(
+            new Promise((resolve, reject) => {
+              img.addEventListener('load', resolve);
+              img.addEventListener('error', resolve); // Resolve even on error to not block loading
+              
+              // Timeout for slow-loading images
+              setTimeout(resolve, 3000);
+            })
+          );
+        }
+      });
+
+      return Promise.all(imagePromises);
+    }
+
+    // Wait for DOM content and all images
+    window.addEventListener('load', async function() {
+      try {
+        // Wait for all images to load
+        await checkImagesLoaded();
+        
+        // Hide loading screen
+        hideLoadingScreen();
+      } catch (error) {
+        console.error('Error loading images:', error);
+        hideLoadingScreen();
+      }
+    });
+
+    // Fallback: Force hide after 8 seconds if something goes wrong
+    setTimeout(() => {
+      const loadingScreen = document.getElementById('loadingScreen');
+      if (!loadingScreen.classList.contains('fade-out')) {
+        console.warn('Loading screen timeout - forcing hide');
+        loadingScreen.classList.add('fade-out');
+      }
+    }, 8000);
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Artwork data organized by exhibition year
+    const artworks = [
+              {
+        id: 5,
+        title: "Emaweni",
+        year: "2020",
+        exhibition: "2020 Nothwala Impahlana",
+        medium: "",
+        dimensions: "",
+        image: "assets/images/Exhibitions/2020/WITW 20200819_14339-1_V2.webp",
+        description: "A continuation of the abstract series, exploring the relationship between texture and visual narrative."
+      },
+      {
+        id: 7,
+        title: "eZonzibileni III",
+        year: "2020",
+        exhibition: "2020 Nothwala Impahlana",
+        medium: "",
+        dimensions: "",
+        image: "assets/images/Exhibitions/2020/WITW_20200929_15129-1.webp",
+        description: "The final piece in the abstract trilogy, bringing together all elements of the artist's contemporary practice."
+      },
+      {
+        id: 8,
+        title: "Inyanga Yesixhenxe",
+        year: "2020",
+        exhibition: "2020 Nothwala Impahlana",
+        medium: "",
+        dimensions: "",
+        image: "assets/images/Exhibitions/2020/WITW_20200929_15138-1.webp",
+        description: "The final piece in the abstract trilogy, bringing together all elements of the artist's contemporary practice."
+      },
+      {
+        id: 9,
+        title: "eZonzibileni I & II",
+        year: "2020",
+        exhibition: "2020 Nothwala Impahlana",
+        medium: "",
+        dimensions: "",
+        image: "assets/images/Exhibitions/2020/WITW_20200929_15147-1.webp",
+        description: "The final piece in the abstract trilogy, bringing together all elements of the artist's contemporary practice."
+      },
+      {
+        id: 10,
+        title: "Itafa",
+        year: "2020",
+        exhibition: "2020 Nothwala Impahlana",
+        medium: "",
+        dimensions: "",
+        image: "assets/images/Exhibitions/2020/WITW_20200929_15157-1.webp",
+        description: "The final piece in the abstract trilogy, bringing together all elements of the artist's contemporary practice."
+      }
+    ];
+
+    let currentImageIndex = 0;
+
+    // Initialize gallery with exhibition sections
+    function initializeGallery() {
+      const container = document.getElementById('galleryContainer');
+      
+      // Group artworks by exhibition year
+      const groupedArtworks = {};
+      artworks.forEach(artwork => {
+        if (!groupedArtworks[artwork.exhibition]) {
+          groupedArtworks[artwork.exhibition] = [];
+        }
+        groupedArtworks[artwork.exhibition].push(artwork);
+      });
+      
+      // Sort exhibition years in descending order
+      const sortedYears = Object.keys(groupedArtworks).sort((a, b) => b - a);
+      
+      // Create sections for each exhibition year
+      sortedYears.forEach(exhibitionYear => {
+        // Create section header
+        const sectionHeader = document.createElement('div');
+        sectionHeader.className = 'exhibition-section-header';
+        sectionHeader.innerHTML = `<h2 class="section-title fw-light">Exhibition ${exhibitionYear}</h2>`;
+        container.appendChild(sectionHeader);
+        
+        // Create gallery grid for this exhibition
+        const gallery = document.createElement('div');
+        gallery.className = 'gallery-grid';
+        
+        groupedArtworks[exhibitionYear].forEach((artwork, localIndex) => {
+          const globalIndex = artworks.findIndex(a => a.id === artwork.id);
+          const artworkCard = document.createElement('div');
+          artworkCard.className = 'artwork-card';
+          artworkCard.onclick = () => openFullscreen(globalIndex);
+          
+          artworkCard.innerHTML = `
+            <img class="artwork-image" src="${artwork.image}" alt="${artwork.title}" loading="lazy">
+            <div class="artwork-info">
+              <h3 class="artwork-title">${artwork.title}</h3>
+              <p class="artwork-details">
+                <span class="artwork-year">${artwork.year}</span><br>
+                ${artwork.medium}<br>
+                ${artwork.dimensions}
+              </p>
+            </div>
+          `;
+          
+          gallery.appendChild(artworkCard);
+        });
+        
+        container.appendChild(gallery);
+      });
+    }
+
+    // Open fullscreen modal
+    function openFullscreen(index) {
+      currentImageIndex = index;
+      const artwork = artworks[index];
+      const modal = document.getElementById('fullscreenModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDetails = document.getElementById('modalDetails');
+      
+      modalImage.src = artwork.image;
+      modalTitle.textContent = artwork.title;
+      modalDetails.innerHTML = ``;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close fullscreen modal
+    function closeFullscreen() {
+      const modal = document.getElementById('fullscreenModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Navigate to previous image
+    function previousImage() {
+      currentImageIndex = (currentImageIndex - 1 + artworks.length) % artworks.length;
+      openFullscreen(currentImageIndex);
+    }
+
+    // Navigate to next image
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % artworks.length;
+      openFullscreen(currentImageIndex);
+    }
+
+    // Event listeners
+    document.getElementById('closeBtn').onclick = closeFullscreen;
+    document.getElementById('prevBtn').onclick = previousImage;
+    document.getElementById('nextBtn').onclick = nextImage;
+
+    // Close modal when clicking outside the image
+    document.getElementById('fullscreenModal').onclick = function(e) {
+      if (e.target === this) {
+        closeFullscreen();
+      }
+    };
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (document.getElementById('fullscreenModal').classList.contains('active')) {
+        switch(e.key) {
+          case 'Escape':
+            closeFullscreen();
+            break;
+          case 'ArrowLeft':
+            previousImage();
+            break;
+          case 'ArrowRight':
+            nextImage();
+            break;
+        }
+      }
+    });
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', initializeGallery);
+  </script>
+</body>
+</html>
